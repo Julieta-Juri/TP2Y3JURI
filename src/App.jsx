@@ -1,22 +1,30 @@
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./componentes/home";
-import Contacto from "./componentes/contacto";
+// en App organizamos las rutas de la app
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
+import Navbar from "./componentes/navbar";
+import Contacto from "./componentes/contacto";
+import Upload from "./componentes/upload";
+import Servicios from "./componentes/servicios";
 
 
 function App() {
   return (
-    
+
     <Router basename="/TP2Y3JURI/">
-      <nav style={{ padding: "10px", background: "#abbbccff" }}>
-        <Link to="/" style={{ marginRight: "10px" }}>Inicio</Link>
-        <Link to="/contacto">Contacto</Link>
-      </nav>
+      <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+
+        <Route path="/" element={<div></div>} />
+        <Route path="/upload" element={<Upload />} />
+
         <Route path="/contacto" element={<Contacto />} />
+
+        <Route path="/servicios" element={<Servicios />} />
+
+
       </Routes>
     </Router>
   );

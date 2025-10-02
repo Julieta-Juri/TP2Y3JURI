@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import '../estilos/contacto.css';
 
 function Contacto() {
 
@@ -54,44 +55,58 @@ function Contacto() {
   // Esto es lo que se renderiza en pantalla
 
   return (
-    <div>
+    <div className="contacto-page">
       <h1>Contacto</h1>
-      <form onSubmit={handleSubmit} style={{ maxWidth: "400px" }}>
-        <div style={{ marginBottom: "20px" }}>
-          <label>Nombre:</label>
-          <input
-            type="text"
-            name="nombre"
-            value={form.nombre}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div style={{ marginBottom: "20px" }}>
-          <label>Dirección de Correo:</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="ju@gmail.com"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div style={{ marginBottom: "20px" }}>
-          <label>Mensaje:</label>
-          <textarea
-            name="mensaje"
-            value={form.mensaje}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit" id="enviar">Enviar</button>
-      </form>
+      <div className="contacto-wrapper">
+        <form onSubmit={handleSubmit} className="contacto-container">
+          <div className="form-group">
+            <label>Nombre:</label>
+            <input
+              type="text"
+              name="nombre"
+              value={form.nombre}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Dirección de Correo:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="ju@gmail.com"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Mensaje:</label>
+            <textarea
+              name="mensaje"
+              value={form.mensaje}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button type="submit" id="enviar">Enviar</button>
+          {status && <p className="status-message">{status}</p>}
+        </form>
 
-{/* Si status tiene algún valor (no es vacío), se muestra un <p> con el texto del estado. */}
-      {status && <p>{status}</p>}
+        {/* Mapa embebido */}
+        <div className="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168878567453!2d-58.38375908477056!3d-34.60373448045824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf8c948105%3A0x18fa5a2f7a3c35!2sObelisco!5e0!3m2!1ses!2sar!4v1234567890123!5m2!1ses!2sar"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Ubicación"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 }
