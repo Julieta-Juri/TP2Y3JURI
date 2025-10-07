@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Weather from './Weather';
 import '../estilos/navbar.css';
 
 function Navbar() {
@@ -9,6 +10,7 @@ function Navbar() {
         <Link to="/contacto" className="nav-link">Contacto</Link>
         <Link to="/upload" className="nav-link">Upload</Link>
         <Link to="/servicios" className="nav-link">Servicios</Link>
+        <Weather />
       </div>
     </nav>
   );

@@ -7,6 +7,7 @@ import Navbar from "./componentes/navbar";
 import Contacto from "./componentes/contacto";
 import Upload from "./componentes/upload";
 import Servicios from "./componentes/servicios";
+import Weather from "./componentes/Weather";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
 
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/Weather" element={<Weather />} />
 
 
       </Routes>
