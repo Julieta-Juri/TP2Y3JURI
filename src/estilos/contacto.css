@@ -1,12 +1,13 @@
 .contacto-page {
-  padding: 20px;
-  background-color: #F4EBC1;
+  padding: 40px 20px;
+  min-height: calc(100vh - 80px);
 }
+
 .contacto-page h1 {
   text-align: center;
-  color: #372818;
   margin-bottom: 30px;
 }
+
 .contacto-wrapper {
   display: flex;
   gap: 30px;
@@ -21,7 +22,6 @@
   padding: 30px;
   background-color: #553926;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(55, 40, 24, 0.2);
 }
 
 .mapa-container {
@@ -30,7 +30,6 @@
   height: 500px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(55, 40, 24, 0.2);
   border: 2px solid #553926;
 }
 
@@ -51,7 +50,6 @@
   padding: 10px;
   border: 2px solid #372818;
   border-radius: 5px;
-  font-size: 14px;
   background-color: #F4EBC1;
   color: #372818;
 }
@@ -66,6 +64,7 @@
   min-height: 100px;
   resize: vertical;
 }
+
 #enviar {
   width: 100%;
   padding: 12px;
@@ -73,14 +72,14 @@
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
+
 #enviar:hover {
   background-color: #372818;
 }
+
 .status-message {
   margin-top: 15px;
   text-align: center;

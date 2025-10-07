@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import '../estilos/navbar.css';
 import Weather from './Weather';
+import '../estilos/navbar.css';
 
 function Navbar() {
   return (
@@ -10,7 +10,8 @@ function Navbar() {
         <Link to="/contacto" className="nav-link">Contacto</Link>
         <Link to="/upload" className="nav-link">Upload</Link>
         <Link to="/servicios" className="nav-link">Servicios</Link>
-        <Weather />
+        <Link to="/Weather" className="nav-link">API-Clima</Link>
+        
       </div>
     </nav>
   );
